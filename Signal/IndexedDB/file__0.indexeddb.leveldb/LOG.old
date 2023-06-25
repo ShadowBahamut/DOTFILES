@@ -1,0 +1,7 @@
+2023/04/07-21:30:41.970 6d29 Reusing MANIFEST /home/rayquaza/.config/Signal/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2023/04/07-21:30:41.970 6d29 Recovering log #4
+2023/04/07-21:30:41.970 6d29 Reusing old log /home/rayquaza/.config/Signal/IndexedDB/file__0.indexeddb.leveldb/000004.log 
+2023/04/07-21:30:42.780 6d2e Level-0 table #8: started
+2023/04/07-21:30:42.781 6d2e Level-0 table #8: 472 bytes OK
+2023/04/07-21:30:42.782 6d2e Delete type=0 #4
+2023/04/07-21:30:42.782 6d2e Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

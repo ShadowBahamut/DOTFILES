@@ -1,0 +1,38 @@
+[theme]
+theme = "native"
+[icons]
+icons = "awesome6"
+
+[[block]]
+block = "battery"
+format = "$icon $percentage $time "
+if_command = "test -e /sys/class/power_supply/BAT0"
+
+[[block]]
+block = "sound"
+format = "  $icon $volume "
+
+#[[block]]
+#block = "custom"
+#command = ''' echo "$(amixer sget Master | awk -F"[][]" '/Left:/ { print $2 }')" '''
+#interval = 1
+
+[[block]]
+block = "custom"
+command = ''' echo "RAM $(free -h | awk '/^Mem:/ {print $3 "/" $2}')" '''
+interval = 5
+[[block.click]]
+button = "left"
+cmd = ''' notify-send "$(ps axch -o cmd,%mem,size  --sort=-size | head | awk '{$NF=int($NF/1024)"M";}{ print;}')" ''' 
+
+[[block]]
+block = "cpu"
+interval = 5
+format = " $icon $utilization$frequency "
+
+[[block]]
+block = "time"
+interval = 5
+format = " $icon $timestamp.datetime(f:'%a %Y-%m-%d %T') "
+
+#command = ''' cat /sys/class/thermal/thermal_zone0/temp | awk '{printf("%.1f\n",$1/1000)}' '''
